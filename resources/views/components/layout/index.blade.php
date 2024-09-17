@@ -29,6 +29,11 @@
 
     {{ $slot }}
 
+    @routes
+    @if ($react)
+        @viteReactRefresh
+    @endif
+
     @vite($resources)
 </body>
 
