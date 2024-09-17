@@ -1,11 +1,11 @@
-<x-layout title="Inventario Productos - Stocks" react>
+<x-layout title="Inventario Producto - Stocks" react>
 
     <x-main.admin>
-        <x-title title="Movimiento de Productos" />
+        <x-title title="Movimiento de Producto" />
 
         <x-table :cols="[__('Product'), 'mín-stock', 'Stock', 'máx-stock', 'ACCIONES']" :create="route('stock-products.create')" button-name="Registrar movimiento">
             <x-slot name="title">
-                Listado de Stocks de {{ __('Products') }}
+                Listado de Stocks de {{ __('Product') }}
             </x-slot>
             <x-slot name="content">
                 @foreach ($products as $product)
