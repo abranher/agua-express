@@ -20,7 +20,7 @@
                 <span class="sr-only">Toggle sidebar</span>
             </button>
             <a href="https://flowbite.com" class="flex items-center justify-between mr-4">
-                <img src="https://flowbite.s3.amazonaws.com/logo.svg" class="mr-3 h-8" alt="Flowbite Logo" />
+                <img src="{{ asset('img/logo.jpeg') }}" class="mr-3 h-12 rounded-full" alt="Flowbite Logo" />
                 <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
             </a>
             <form action="#" method="GET" class="hidden md:block md:pl-2">
@@ -376,8 +376,10 @@
             <div class="hidden z-50 my-4 w-56 text-base list-none bg-white divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600 rounded-xl"
                 id="dropdown">
                 <div class="py-3 px-4">
-                    <span class="block text-sm font-semibold text-gray-900 dark:text-white">{{ current_user()->name }}</span>
-                    <span class="block text-sm text-gray-900 truncate dark:text-white">{{ current_user()->email }}</span>
+                    <span
+                        class="block text-sm font-semibold text-gray-900 dark:text-white">{{ current_user()->name }}</span>
+                    <span
+                        class="block text-sm text-gray-900 truncate dark:text-white">{{ current_user()->email }}</span>
                 </div>
                 <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
                     <li>
