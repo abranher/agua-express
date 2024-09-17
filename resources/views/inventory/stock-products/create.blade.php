@@ -9,7 +9,7 @@
                     class="p-7 bg-white dark:bg-dark-card border border-gray-200 dark:border-gray-600 rounded-lg shadow-sm flex flex-col gap-8">
                     <div>
                         <x-table.title>
-                            Buscador de Productos
+                            Buscador de Producto
                         </x-table.title>
                         <div class="w-96">
                             <form class="flex items-center">

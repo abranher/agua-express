@@ -3,7 +3,7 @@
     <x-main.admin>
         <x-title title="Movimiento de Productos" />
 
-        <x-simple-table :cols="['Código de lote', 'Fecha de creación', 'Stocks']" :create="route('stock-products.create')">
+        <x-simple-table :cols="['Fecha de creación', 'Stocks']" :create="route('stock-products.create')">
             <x-slot name="title">
                 Listado de Stocks de {{ __('Product') }} por Lotes
             </x-slot>
@@ -16,10 +16,6 @@
                     <p class="font-medium">{{ $product->id }}</p>
                 </div>
                 <div class="flex gap-1">
-                    <p class="font-bold">Código: </p>
-                    <p class="font-medium">{{ $product->code }}</p>
-                </div>
-                <div class="flex gap-1">
                     <p class="font-bold">Nombre: </p>
                     <p class="font-medium">{{ $product->name }}</p>
                 </div>
@@ -29,10 +25,6 @@
                     <x-table.tr>
                         <x-table.td>
                             {{ $loop->iteration }}
-                        </x-table.td>
-
-                        <x-table.td>
-                            {{ $stock->code }}
                         </x-table.td>
 
                         <x-table.td>
