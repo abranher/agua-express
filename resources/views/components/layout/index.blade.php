@@ -35,6 +35,11 @@
     @endif
 
     @vite($resources)
+    @auth
+        <script>
+            const csrfToken = @js(csrf_token());
+        </script>
+    @endauth
 </body>
 
 </html>
