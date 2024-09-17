@@ -16,6 +16,6 @@ class RoleSeeder extends Seeder
   {
     Role::create(['name' => EnumRole::ADMIN]);
     Role::create(['name' => EnumRole::CUSTOMER]);
-    Role::create(['name' => EnumRole::DELIVERY_MAN]);
+    Role::create(['name' => EnumRole::PLANT_WORKER]);
   }
 }
