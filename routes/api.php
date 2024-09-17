@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\StockProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -15,5 +16,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+  return $request->user();
 });
+
+
+
+Route::apiResource('stock-products', StockProductController::class)->names([
+  'index' => 'api-stock-products.index',
+  'store' => 'api-stock-products.store',
+  'show' => 'api-stock-products.show',
+  'update' => 'api-stock-products.update',
+  'destroy' => 'api-stock-products.destroy',
+]);
