@@ -10,13 +10,10 @@
 
         <x-table :cols="[
             __('Product'),
-            __('Code'),
             __('Image'),
-            __('Category'),
             'Precio actual',
             'Precio venta',
             __('Description'),
-            __('Size'),
             'Mín-Stock',
             'Máx-Stock',
             'Última actualización',
@@ -38,18 +35,10 @@
                         </x-table.td>
 
                         <x-table.td>
-                            {{ $product->code }}
-                        </x-table.td>
-
-                        <x-table.td>
                             <div class="flex items-center justify-center">
                                 <img src="{{ $product->picture_url_product }}" alt="{{ $product->name }}"
                                     class="h-12 w-auto aspect-video" />
                             </div>
-                        </x-table.td>
-
-                        <x-table.td>
-                            {{ $product->categoryProduct->name }}
                         </x-table.td>
 
                         <x-table.td>
@@ -62,10 +51,6 @@
 
                         <x-table.td>
                             {{ sub($product->description) }}
-                        </x-table.td>
-
-                        <x-table.td>
-                            {{ $product->size }}
                         </x-table.td>
 
                         <x-table.td>

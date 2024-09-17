@@ -5,8 +5,8 @@ import react from "@vitejs/plugin-react";
 let inputs = [
   "css/app.css",
   "js/app.js",
-  "js/inventory/inv-pro/create-product.js",
-  "js/inventory/inv-pro/edit-product.js",
+  "js/inventory/product/create-product.js",
+  "js/inventory/product/edit-product.js",
 ].map((item) => "resources/".concat(item));
 
 export default defineConfig({

@@ -14,7 +14,7 @@
   ];
 
   $colors = [
-      'primary' => 'text-white bg-violet-600 active:bg-violet-700 focus:outline-none',
+      'primary' => 'text-white bg-blue-700 active:bg-blue-700 focus:outline-none',
       'light' => 'text-gray-900 bg-white border border-gray-300 active:bg-gray-100 focus:outline-none dark:bg-transparent dark:text-gray-300 dark:border-gray-600 dark:active:bg-gray-800',
       'success' => 'text-white bg-green-600 active:bg-green-700 focus:outline-none',
       'right' => 'text-white bg-blue-600 active:bg-blue-700 focus:outline-none',

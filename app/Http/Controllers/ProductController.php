@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\inventory\StoreProductRequest;
 use App\Models\Product;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\View\View;
 
 class ProductController extends Controller
 {
@@ -13,24 +16,31 @@ class ProductController extends Controller
   public function index()
   {
     return view('inventory.products.index', [
-      'products' => Product::with('categoryProduct')->paginate(5),
+      'products' => Product::paginate(5),
     ]);
   }
 
   /**
    * Show the form for creating a new resource.
    */
-  public function create()
+  public function create(): View
   {
-    //
+    return view('inventory.products.create');
   }
 
   /**
    * Store a newly created resource in storage.
    */
-  public function store(Request $request)
+  public function store(StoreProductRequest $request): RedirectResponse
   {
-    //
+    Product::create(
+      $request->safe()->merge([
+        'image' => $request->file('image')->store('/', 'products'),
+      ])
+        ->all()
+    );
+
+    return to_route('products.index')->with('status', 'Producto creado exitosamente!');
   }
 
   /**

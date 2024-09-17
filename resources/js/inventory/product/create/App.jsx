@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import InputForm from "../../../components/InputForm";
-import SelectForm from "../../../components/SelectForm";
 import TextareaForm from "../../../components/TextareaForm";
 import UploadIcon from "../../../icons/UploadIcon";
+import Button from "../../../components/Button";
 
 function App() {
   const [previewUrl, setPreviewUrl] = useState(null);
@@ -95,35 +95,6 @@ function App() {
               }}
             />
 
-            <SelectForm
-              name={"category_product_id"}
-              title={"Categoría"}
-              register={register}
-              errors={errors.category_product_id}
-              rules={{
-                required: {
-                  value: true,
-                  message: "La categoría es requerida!",
-                },
-              }}
-              data={categories}
-            />
-
-            <SelectForm
-              name={"size"}
-              title={"Tamaño"}
-              register={register}
-              errors={errors.size}
-              rules={{
-                required: {
-                  value: true,
-                  message: "El tamaño es requerido!",
-                },
-              }}
-              data={sizes}
-              arrayData
-            />
-
             <InputForm
               name={"min_stock"}
               type={"number"}
@@ -196,7 +167,7 @@ function App() {
             <div className="flex justify-center items-center w-full">
               <label
                 htmlFor="dropzone-file"
-                className="flex flex-col justify-center items-center w-full h-32 bg-violet-50 rounded-lg border-2 border-violet-300 border-dashed cursor-pointer hover:bg-violet-100"
+                className="flex relative flex-col justify-center items-center w-full h-32 bg-violet-50 rounded-lg border-2 border-violet-300 border-dashed cursor-pointer hover:bg-violet-100"
               >
                 <div className="flex flex-col justify-center items-center pt-5 pb-6">
                   <UploadIcon />
@@ -212,7 +183,7 @@ function App() {
                   type="file"
                   name="image"
                   onChange={handleFileChange}
-                  className="z-0"
+                  className="z-0 hidden"
                   required
                 />
               </label>
@@ -265,21 +236,7 @@ function App() {
                 Descartar
               </button>
             </a>
-            {categories.length == 0 ? (
-              <a
-                href={route("category-products.create")}
-                className="w-full sm:w-auto justify-center text-white inline-flex bg-violet-600 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:hover:bg-violet-600 active:bg-violet-800"
-              >
-                Crear Categoría
-              </a>
-            ) : (
-              <button
-                type="submit"
-                className="w-full sm:w-auto justify-center text-white inline-flex bg-violet-600 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:hover:bg-violet-600 active:bg-violet-800"
-              >
-                Añadir
-              </button>
-            )}
+            <Button>Añadir</Button>
           </div>
         </section>
       </form>
