@@ -3,7 +3,8 @@
     <x-auth-session-status class="mb-4" :status="session('status')" />
 
     <div class="flex flex-col items-center justify-center px-6 pt-8 mx-auto md:h-screen pt:mt-0 dark:bg-gray-900">
-        <a href="#" class="flex items-center flex-col justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white">
+        <a href="#"
+            class="flex items-center flex-col justify-center mb-8 text-2xl font-semibold lg:mb-10 dark:text-white">
             <img src="/img/logo.jpeg" class="mr-4 h-16 rounded-full" alt="FlowBite Logo">
             <span>Agua Express</span>
         </a>
@@ -38,7 +39,7 @@
                         <input id="remember" type="checkbox"
                             class="w-4 h-4 border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:focus:ring-primary-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600"
                             name="remember">
-                        <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
+                        <span class="ms-2 text-sm text-gray-600">{{ __('Remember Me') }}</span>
                     </label>
                 </div>
 
