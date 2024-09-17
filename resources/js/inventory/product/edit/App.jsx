@@ -83,37 +83,6 @@ function App() {
               }}
             />
 
-            <SelectForm
-              name={"category_product_id"}
-              title={"Categoría"}
-              register={register}
-              defaultValue={product.category_product_id}
-              errors={errors.category_product_id}
-              rules={{
-                required: {
-                  value: true,
-                  message: "La categoría es requerida!",
-                },
-              }}
-              data={categories}
-            />
-
-            <SelectForm
-              name={"size"}
-              title={"Tamaño"}
-              register={register}
-              errors={errors.size}
-              defaultValue={product.size}
-              rules={{
-                required: {
-                  value: true,
-                  message: "El tamaño es requerido!",
-                },
-              }}
-              data={sizes}
-              arrayData
-            />
-
             <InputForm
               name={"min_stock"}
               type={"number"}
